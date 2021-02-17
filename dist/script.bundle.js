@@ -480,13 +480,13 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./src/sounds.json":
-/*!*************************!*\
-  !*** ./src/sounds.json ***!
-  \*************************/
+/***/ "./src/sounds-gh.json":
+/*!****************************!*\
+  !*** ./src/sounds-gh.json ***!
+  \****************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('[{"src":"../sounds/water_droplet.mp3","title":"Water"},{"src":"../sounds/beer_can_opening.mp3","title":"Beer Can"},{"src":"../sounds/bell_ring.mp3","title":"Bell"},{"src":"../sounds/branch_break.mp3","title":"Branch"},{"src":"../sounds/button_click_on.mp3","title":"Button Click On"},{"src":"../sounds/button_click.mp3","title":"Button Click"},{"src":"../sounds/button_push.mp3","title":"Button Push"},{"src":"../sounds/button_tiny.mp3","title":"Button Tiny"},{"src":"../sounds/camera_flashing_2.mp3","title":"Camera Flash 2"},{"src":"../sounds/camera_flashing.mp3","title":"Camera Flash"},{"src":"../sounds/cd_tray.mp3","title":"CD Tray"},{"src":"../sounds/computer_error.mp3","title":"Computer Error"},{"src":"../sounds/door_bell.mp3","title":"Door Bell"},{"src":"../sounds/door_bump.mp3","title":"Door Bump"},{"src":"../sounds/glass.mp3","title":"Glass"},{"src":"../sounds/keyboard_desk.mp3","title":"Keyboard Desk"},{"src":"../sounds/light_bulb_breaking.mp3","title":"Light Bulp Breaking"},{"src":"../sounds/metal_plate_2.mp3","title":"Metal Plate 2"},{"src":"../sounds/metal_plate.mp3","title":"Metal Plate"},{"src":"../sounds/pop_cork.mp3","title":"Cork"},{"src":"../sounds/snap.mp3","title":"Snap"},{"src":"../sounds/staple_gun.mp3","title":"Staple Gun"},{"src":"../sounds/tap.mp3","title":"Tap"},{"src":"../sounds/water_droplet_2.mp3","title":"Water Droplet 2"},{"src":"../sounds/water_droplet_3.mp3","title":"Water Droplet 3"}]');
+module.exports = JSON.parse('[{"src":"../sounds/water_droplet.mp3","title":"Water"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/beer_can_opening.mp3","title":"Beer Can"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/bell_ring.mp3","title":"Bell"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/branch_break.mp3","title":"Branch"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/button_click_on.mp3","title":"Button Click On"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/button_click.mp3","title":"Button Click"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/button_push.mp3","title":"Button Push"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/button_tiny.mp3","title":"Button Tiny"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/camera_flashing_2.mp3","title":"Camera Flash 2"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/camera_flashing.mp3","title":"Camera Flash"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/cd_tray.mp3","title":"CD Tray"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/computer_error.mp3","title":"Computer Error"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/door_bell.mp3","title":"Door Bell"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/door_bump.mp3","title":"Door Bump"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/glass.mp3","title":"Glass"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/keyboard_desk.mp3","title":"Keyboard Desk"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/light_bulb_breaking.mp3","title":"Light Bulp Breaking"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/metal_plate_2.mp3","title":"Metal Plate 2"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/metal_plate.mp3","title":"Metal Plate"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/pop_cork.mp3","title":"Cork"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/snap.mp3","title":"Snap"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/staple_gun.mp3","title":"Staple Gun"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/tap.mp3","title":"Tap"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/water_droplet_2.mp3","title":"Water Droplet 2"},{"src":"https://raw.githubusercontent.com/Sebastian-Altenburg/Soundboard/master/sounds/water_droplet_3.mp3","title":"Water Droplet 3"}]');
 
 /***/ })
 
@@ -565,7 +565,7 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _sounds_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sounds.json */ "./src/sounds.json");
+/* harmony import */ var _sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sounds-gh.json */ "./src/sounds-gh.json");
 /* eslint-disable no-unused-vars */
 
 
@@ -591,7 +591,7 @@ var addSoundBtnToPage = function addSoundBtnToPage(arrayOrObj) {
   }
 };
 
-addSoundBtnToPage(_sounds_json__WEBPACK_IMPORTED_MODULE_1__); // Eventlistener of the 3 buttons and the input (header), tugged into this IIFE
+addSoundBtnToPage(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__); // Eventlistener of the 3 buttons and the input (header), tugged into this IIFE
 
 var eventListeners = function () {
   var rndSoundBtn = document.querySelector(".rnd-sound-btn").addEventListener("click", function () {
@@ -602,26 +602,26 @@ var eventListeners = function () {
   });
   var rndBtn = document.querySelector(".rnd-btn").addEventListener("click", function () {
     delButtons();
-    shuffle(_sounds_json__WEBPACK_IMPORTED_MODULE_1__);
-    addSoundBtnToPage(_sounds_json__WEBPACK_IMPORTED_MODULE_1__);
+    shuffle(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__);
+    addSoundBtnToPage(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__);
   });
   var ascBtn = document.querySelector(".asc-btn").addEventListener("click", function () {
     delButtons();
-    compare(_sounds_json__WEBPACK_IMPORTED_MODULE_1__);
-    addSoundBtnToPage(_sounds_json__WEBPACK_IMPORTED_MODULE_1__);
+    compare(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__);
+    addSoundBtnToPage(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__);
   });
   var textInput = document.querySelector(".submitForm").addEventListener("click", function () {
     var input = document.querySelector(".hd-input");
 
-    for (var i = 0; i < _sounds_json__WEBPACK_IMPORTED_MODULE_1__.length; i += 1) {
-      if (_sounds_json__WEBPACK_IMPORTED_MODULE_1__[i].title === input.value) {
+    for (var i = 0; i < _sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__.length; i += 1) {
+      if (_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__[i].title === input.value) {
         delButtons();
-        addSoundBtnToPage(_sounds_json__WEBPACK_IMPORTED_MODULE_1__[i]);
+        addSoundBtnToPage(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__[i]);
         return;
       }
 
       delButtons();
-      addSoundBtnToPage(_sounds_json__WEBPACK_IMPORTED_MODULE_1__);
+      addSoundBtnToPage(_sounds_gh_json__WEBPACK_IMPORTED_MODULE_1__);
     }
   });
 }();

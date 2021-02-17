@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import "./style.css";
-import myArray from "./sounds.json";
+import myArray from "./sounds-gh.json";
 
 const addSoundBtnToPage = (arrayOrObj) => {
     if (Array.isArray(arrayOrObj)) {
